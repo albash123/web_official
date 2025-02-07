@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Society 5 Solutions</title>
+    <title>Society 5 Solutions LLC</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -92,11 +92,12 @@
         }
 
         .floating-card {
-            background: white;
-            border-radius: 15px;
-            padding: 1rem;
+            background: rgba(0, 0, 0, 0.349);
+            border-radius: 10px;
+            padding: 0.5rem;
             margin-bottom: 1rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            box-shadow: 5px 5px 15px rgba(6, 124, 192, 0.2);
         }
 
         .stats-card {
@@ -105,12 +106,169 @@
             padding: 0.5rem 1rem;
             border-radius: 10px;
             position: absolute;
+
         }
+
+        .stats-card_top {
+            background: #5AA1E3;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            position: absolute;
+            top: 520px;
+            right: 10px;
+        }
+
+        /* For screens smaller than 768px (tablets and below) */
+
+
+        /* For screens smaller than 480px (mobile devices) */
+        @media (min-width: 320px) {
+            .stats-card_top {
+                top: 380px;
+                /* Adjust the position further for small screens */
+                right: 10px;
+                /* Further adjust the right margin */
+                padding: 0.01rem 0.8rem;
+                /* Adjust padding */
+            }
+        }
+
+        /* For screens smaller than 480px (mobile devices) */
+        @media (min-width: 425px) {
+            .stats-card_top {
+                top: 390px;
+                /* Adjust the position further for small screens */
+                right: 10px;
+                /* Further adjust the right margin */
+                padding: 0.01rem 0.8rem;
+                /* Adjust padding */
+            }
+        }
+
+        @media (min-width: 768px) {
+            .stats-card_top {
+                top: 570px;
+                /* Adjust the position further for small screens */
+                right: 10px;
+                /* Further adjust the right margin */
+                padding: 0.01rem 0.8rem;
+                /* Adjust padding */
+            }
+        }
+
+        @media (min-width: 1440px) {
+            .stats-card_top {
+                top: 460px;
+                /* Adjust the position further for small screens */
+                right: 10px;
+                /* Further adjust the right margin */
+                padding: 0.01rem 0.8rem;
+                /* Adjust padding */
+            }
+        }
+
+        .text_on_board {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #3498db;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            letter-spacing: 1px;
+            line-height: 1.3;
+        }
+
+        /* For screens smaller than 1200px (large screens) */
+        @media (max-width: 1199px) {
+            .text_on_board {
+                font-size: 2.2rem;
+            }
+        }
+
+        /* For screens smaller than 992px (medium screens, tablets) */
+        @media (max-width: 991px) {
+            .text_on_board {
+                font-size: 1.8rem;
+                letter-spacing: 0.8px;
+            }
+        }
+
+        /* For screens smaller than 768px (small screens, tablets in portrait mode) */
+        @media (max-width: 767px) {
+            .text_on_board {
+                font-size: 1.6rem;
+                letter-spacing: 0.6px;
+            }
+        }
+
+        /* For screens smaller than 576px (mobile devices) */
+        @media (max-width: 575px) {
+            .text_on_board {
+                font-size: 1.4rem;
+                letter-spacing: 0.4px;
+            }
+        }
+
+
 
         .meeting-image {
             border-radius: 15px;
             width: 100%;
             height: auto;
+        }
+
+        .info_share_gradient-bg {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e1f4ff 100%);
+            min-height: 100vh;
+        }
+
+        .info_share_speech-bubble {
+            position: relative;
+            background: #64b5f6;
+            border-radius: 10px;
+            padding: 15px;
+            color: white;
+            margin-bottom: 20px;
+            min-height: 80px;
+        }
+
+        .info_share_speech-bubble::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            border-width: 15px 15px 0;
+            border-style: solid;
+            border-color: #64b5f6 transparent;
+            transform: translateX(-50%);
+        }
+
+        .info_share_team-member {
+
+            margin-top: 170px;
+            border: 2px solid #dee2e6;
+        }
+
+        .info_share_content-box {
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            background: white;
+        }
+
+        .info_share_blue-heading {
+            color: #64b5f6;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .info_share_team-member {
+                text-align: center;
+            }
+
+            .info_share_team-member img {
+                max-width: 200px;
+                margin: 0 auto;
+            }
         }
     </style>
 </head>
@@ -120,8 +278,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark py-3">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-hGmS5lgrx11uWB2pflB1fb6CW6Rm0W.png"
-                    alt="Society 5 Solutions Logo" class="img-fluid">
+                <img src="assets/logo_design.svg" alt="Society 5 Solutions Logo" class="img-fluid">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -165,39 +322,82 @@
                     <!-- Board Pack Card -->
                     <div class="floating-card mb-4">
                         <div class="d-flex align-items-center">
-                            <div class="bg-warning rounded-circle p-2 me-2">
-                                <svg width="24" height="24" fill="white" viewBox="0 0 16 16">
-                                    <path
-                                        d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" />
-                                </svg>
+                            <div class=" rounded-circle p-2 me-2">
+                                <img src="assets/lock.svg" alt="" width="50" height="50" fill="white"
+                                    viewBox="0 0 16 16">
+
+                                </img>
                             </div>
-                            <h5 class="mb-0 text-dark">Board Pack</h5>
+                            <h5 class="mb-0 text_on_board ">"Leading Product of Grc"</h5>
                         </div>
-                        <div class="mt-3 text-dark">
-                            <h6>AGENDA</h6>
-                            <div class="bg-light p-2 rounded">
-                                <p class="mb-0">1. Opening Meeting</p>
-                            </div>
-                        </div>
+
                     </div>
 
                     <!-- Stats Cards -->
-                    <div class="stats-card" style="top: 20px; right: 20px;">
-                        <h3 class="mb-0">2k</h3>
-                        <small>Satisfied Client</small>
+                    <div class="stats-card">
+                        <h3 class=" mb-0">2k</h3>
+                        <small>Satisfied Client world wide</small>
                     </div>
-                    <div class="stats-card" style="bottom: 100px; right: 40px;">
+
+                    <div class="stats-card_top">
                         <h3 class="mb-0">12k</h3>
                         <small>Successful Project</small>
                     </div>
 
-                    <!-- Meeting Image -->
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-hGmS5lgrx11uWB2pflB1fb6CW6Rm0W.png"
-                        alt="Business Meeting" class="meeting-image mt-4">
+
+
+                    <!-- Meeting Video -->
+                    <video class="meeting-image mt-4" loop autoplay muted>
+                        <source src="assets/Women_coding.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+
+
                 </div>
             </div>
         </div>
     </section>
+    <div class="info_share_gradient-bg">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <!-- Team Members Column -->
+                <div class="col-lg-6">
+                    <div class="row">
+                        <!-- First Team Member -->
+                        <div class="col-md-6 info_share_team-member">
+                            <div class="info_share_speech-bubble">
+                                Lorem ipsum dolor sit amet
+                            </div>
+                            <img src="assets/Albash_picture.png" alt="Team member" class="img-fluid">
+                        </div>
+                        <!-- Second Team Member -->
+                        <div class="col-md-6 info_share_team-member">
+                            <div class="info_share_speech-bubble">
+                                Consectetur adipiscing elit
+                            </div>
+                            <img src="assets/Faiz_picture.png" alt="Team member" class="img-fluid">
+                            "
+                            alt="Team member" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Column -->
+                <div class="col-lg-6">
+                    <h2 class="info_share_blue-heading">Lorem ipsum dolor sit amet consectetur.</h2>
+                    <div class="info_share_content-box">
+                        <p>Lorem ipsum dolor sit amet consectetur. Consectetur integer eget faucibus netus ac vitae.
+                            Tellus hac eleifend enim turpis vitae. Turpis eu sed nec consequat morbi pellentesque est
+                            feugiat molestie. Nisi dolor vulputate ante condimentum neque faucibus. Odio vulputate neque
+                            quam amet. Quisque sit non fermentum justo enim tortor integer suspendisse consectetur. Sit
+                            nascetur praesent blandit posuere facilisis rhoncus amet. Urna egestas euismod proin neque.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
