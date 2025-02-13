@@ -270,6 +270,86 @@
                 margin: 0 auto;
             }
         }
+
+        .service-title {
+            color: #3498db;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .service-card:hover {
+            transform: translateX(10px);
+        }
+
+        .service-icon {
+            color: #3498db;
+            font-size: 1.5rem;
+            margin-right: 1rem;
+        }
+
+        .image-container {
+            position: relative;
+            background: white;
+            border-radius: 30px;
+            padding: 2rem;
+            overflow: hidden;
+        }
+
+        .curved-shape {
+            position: absolute;
+            right: 0;
+            height: 100%;
+            top: 0;
+            width: 50%;
+            background: linear-gradient(90deg, transparent, #3498db20);
+            clip-path: polygon(100% 0, 0 100%, 100% 100%);
+        }
+
+        .badge-custom {
+            background: #3498db;
+            color: white;
+            padding: 1rem;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: absolute;
+            z-index: 2;
+        }
+
+        .badge-1 {
+            top: 320%;
+            right: 85%;
+        }
+
+        .badge-2 {
+            top: 240%;
+            right: 85%;
+        }
+
+        @media (max-width: 992px) {
+            .image-container {
+                margin-top: 2rem;
+            }
+
+            .badge-custom {
+                width: 80px;
+                height: 80px;
+                font-size: 0.8rem;
+            }
+        }
     </style>
 </head>
 
@@ -357,42 +437,68 @@
             </div>
         </div>
     </section>
-    <div class="info_share_gradient-bg">
-        <div class="container py-5">
-            <div class="row align-items-center">
-                <!-- Team Members Column -->
-                <div class="col-lg-6">
-                    <div class="row">
-                        <!-- First Team Member -->
-                        <div class="col-md-6 info_share_team-member">
-                            <div class="info_share_speech-bubble">
-                                Lorem ipsum dolor sit amet
-                            </div>
-                            <img src="assets/Albash_picture.png" alt="Team member" class="img-fluid">
-                        </div>
-                        <!-- Second Team Member -->
-                        <div class="col-md-6 info_share_team-member">
-                            <div class="info_share_speech-bubble">
-                                Consectetur adipiscing elit
-                            </div>
-                            <img src="assets/Faiz_picture.png" alt="Team member" class="img-fluid">
-                            "
-                            alt="Team member" class="img-fluid">
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Content Column -->
-                <div class="col-lg-6">
-                    <h2 class="info_share_blue-heading">Lorem ipsum dolor sit amet consectetur.</h2>
-                    <div class="info_share_content-box">
-                        <p>Lorem ipsum dolor sit amet consectetur. Consectetur integer eget faucibus netus ac vitae.
-                            Tellus hac eleifend enim turpis vitae. Turpis eu sed nec consequat morbi pellentesque est
-                            feugiat molestie. Nisi dolor vulputate ante condimentum neque faucibus. Odio vulputate neque
-                            quam amet. Quisque sit non fermentum justo enim tortor integer suspendisse consectetur. Sit
-                            nascetur praesent blandit posuere facilisis rhoncus amet. Urna egestas euismod proin neque.
-                        </p>
+    <div class="container py-5">
+        <h1 class="service-title text-center mb-5">Our Services</h1>
+
+        <div class="row">
+            <!-- Services List -->
+            <div class="col-lg-6">
+                <div class="services-list">
+                    <!-- Service Cards -->
+                    <div class="service-card d-flex align-items-center">
+                        <i class="bi bi-code-square service-icon"></i>
+                        <div>
+                            <h5 class="text-dark mb-1">Software Development</h5>
+                            <p class="text-muted mb-0">Empowering Business Through Technology</p>
+                        </div>
                     </div>
+
+                    <!-- Repeat service cards 5 more times -->
+                    <div class="service-card d-flex align-items-center">
+                        <i class="bi bi-code-square service-icon"></i>
+                        <div>
+                            <h5 class="text-dark mb-1">Software Development</h5>
+                            <p class="text-muted mb-0">Empowering Business Through Technology</p>
+                        </div>
+                    </div>
+                    <div class="service-card d-flex align-items-center">
+                        <i class="bi bi-code-square service-icon"></i>
+                        <div>
+                            <h5 class="text-dark mb-1">Software Development</h5>
+                            <p class="text-muted mb-0">Empowering Business Through Technology</p>
+                        </div>
+                    </div>
+                    <div class="service-card d-flex align-items-center">
+                        <i class="bi bi-code-square service-icon"></i>
+                        <div>
+                            <h5 class="text-dark mb-1">Software Development</h5>
+                            <p class="text-muted mb-0">Empowering Business Through Technology</p>
+                        </div>
+                    </div>
+                    <div class="service-card d-flex align-items-center">
+                        <i class="bi bi-code-square service-icon"></i>
+                        <div>
+                            <h5 class="text-dark mb-1">Software Development</h5>
+                            <p class="text-muted mb-0">Empowering Business Through Technology</p>
+                        </div>
+                    </div>
+
+                    <!-- Add remaining service cards... -->
+                </div>
+            </div>
+
+            <!-- Image Section -->
+            <div class="col-lg-6 position-relative">
+                <div class="badge-custom badge-1">
+                    Plagiarism Free
+                </div>
+                <div class="badge-custom badge-2">
+                    Money Back Guarantee
+                </div>
+                <div class="image-container">
+                    <div class="curved-shape"></div>
+                    <img src="assets/imges.jpg" class="img-fluid">
                 </div>
             </div>
         </div>
